@@ -1,0 +1,645 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Giới thiệu</title>
+    <link rel="icon" type="image/x-icon" href="images-removebg-preview.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        .head {
+            background-image: url('https://pikwizard.com/pw/medium/f218887a98bb48c9e895582f8dbc9bdd.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 20px 30px 30px 20px;
+        }
+
+        .head p {
+            padding-left: 20px;
+            color: white;
+            font-family: Hiragino Serif;
+            font-size: 150%;
+        }
+
+        .head img {
+            max-width: 70%;
+            padding: 40px 30px 30px 20px;
+        }
+
+        .bigtext {
+            text-align: center;
+            padding: 60px 0 60px 0;
+            margin: 0 auto;
+            width: 80%;
+            display: flex;
+            align-items: center;
+        }
+
+        .ltext h1 {
+            display: inline;
+            font-family: Hiragino Serif;
+            color: #CC1F3D;
+        }
+
+        .bigtext p {
+            font-size: medium;
+        }
+
+        .ctla {
+            background-color: #cc1f3d;
+            color: white;
+            padding: 60px 0 60px 0;
+        }
+
+        .ctla-text {
+            width: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        .ctla h3 {
+            width: 150px;
+            font-family: Arial;
+        }
+
+        .thanhlap {
+            padding: 20px 0 40px 0;
+        }
+
+        .thanhlap p {
+            margin: 0;
+        }
+
+        .thanhlap-mt {
+            gap: 50px;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+
+        .thanhlap-mota {
+            text-align: center;
+            border: black solid 1px;
+            padding: 20px 10px 10px 10px;
+            width: 20%;
+        }
+
+        .thanhlap-mota img {
+            width: 70px;
+        }
+
+        .gt {
+            margin-top: 10px;
+            font-size: larger;
+            font-weight: bold;
+        }
+
+        .oval {
+            padding: 5px 5px;
+            background-color: #CC1F3D;
+            border-radius: 10% 40% 20% 50%;
+            width: 20%;
+            margin: 15px auto;
+            color: white;
+            font-weight: bolder;
+        }
+
+        .l {
+            color: rgb(119, 119, 119);
+        }
+
+        .anh img {
+            width: 70%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: lightseagreen 2px dashed;
+            padding: 10px 10px;
+            text-align: center;
+        }
+
+        .conten {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .conten img {
+            width: 30px;
+            filter: invert(1);
+        }
+
+        .anh1 {
+            border: 1px solid;
+            padding: 20px 20px;
+            text-align: center;
+            width: 70px;
+            border-radius: 50% 50% 0 50%;
+            background-color: rgb(49, 49, 49);
+        }
+
+        .conten p {
+            width: 400px;
+        }
+
+        .asl {
+            position: relative;
+            margin-bottom: 20px;
+            background-image: url('https://anh.quatructuyen.com/media/catalog/product/cache/1/small_image/370x370/9df78eab33525d08d6e5fb8d27136e95/1/0/10_6.jpg');
+            width: 100%;
+            height: 250px;
+            background-size: cover;
+        }
+
+        .asl1 {
+            position: relative;
+            margin-bottom: 20px;
+            background-image: url('https://anh.quatructuyen.com/media/catalog/product/cache/1/small_image/370x370/9df78eab33525d08d6e5fb8d27136e95/z/6/z6064936598685_6b3c70d142cfce78d0cc3a5d75aa4e61.jpg');
+            width: 100%;
+            height: 250px;
+            background-size: cover;
+        }
+
+        .asl2 {
+            position: relative;
+            margin-bottom: 20px;
+            background-image: url('https://anh.quatructuyen.com/media/catalog/product/cache/1/small_image/370x370/9df78eab33525d08d6e5fb8d27136e95/1/2/12_4.jpg');
+            width: 100%;
+            height: 250px;
+            background-size: cover;
+        }
+
+        .asl3 {
+            position: relative;
+            margin-bottom: 20px;
+            background-image: url('https://anh.quatructuyen.com/media/catalog/product/cache/1/small_image/370x370/9df78eab33525d08d6e5fb8d27136e95/l/o/loa_bluetooth_cua_so_6.jpg');
+            width: 100%;
+            height: 250px;
+            background-size: cover;
+        }
+
+        .in {
+            position: absolute;
+            background-color: #cc1f3c71;
+            color: white;
+            cursor: pointer;
+            justify-content: center;
+            bottom: 0;
+            padding: 5px;
+            width: 100%;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .in:hover {
+            color: cyan;
+            background-color:#cc1f3cd2;
+        }
+
+        .mn {
+            margin-bottom: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        a:hover {
+            color: white;
+        }
+
+        .pfixed {
+            position: fixed;
+            right: 30px;
+            bottom: 10px;
+            float: right;
+            padding: 8px 20px;
+            border: 1px solid white;
+            background-color: #cc1f3d;
+            border-radius: 5px;
+            transition: all 0.3 ease-in-out;
+            color: white;
+            font-weight: bold;
+        }
+
+        .pfixed:hover {
+            background-color: #e25a72;
+
+        }
+
+        .footer {
+            background-color: #CC1F3D;
+        }
+
+        .diachi {
+            color: white;
+            display: flex;
+            justify-content: center;
+            text-align: left;
+        }
+
+        .diachi p {
+            width: 65%;
+        }
+
+        .diachi img {
+            filter: invert(1);
+            width: 20px;
+            height: 23px;
+            margin-right: 15px;
+
+        }
+
+        .ct {
+            text-align: center;
+            margin: 10px auto;
+        }
+
+        .ctt {
+            justify-content: center;
+        }
+
+        .w {
+            align-items: center;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        .e {
+            color: white;
+        }
+
+        .w img {
+            width: 18px;
+            height: 18px;
+            filter: invert(1);
+        }
+
+        .bct {
+            background-color: rgb(255, 255, 255);
+            width: 250px;
+            justify-content: center;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .bct img {
+            width: 45px;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <div class="head">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <a href="index.html"><img
+                            src="https://anh.quatructuyen.com/media/wysiwyg/quatt/logo/logo_quatructuyen_w.png"
+                            alt=""></a>
+                    <p>Chào mừng bạn đến <br>
+                        Cửa Hàng Quà Tặng & Dịch Vụ Chuyển Quà<br>
+                        Quatructuyen.com</p>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="container">
+        <div class="row bigtext">
+            <div class="col-md-6">
+                <div class="ltext">
+                    <h1><b>Q</b></h1><b>ùa</b>
+                </div>
+                <p>Cung cấp những món quà tặng ý nghĩa, độc đáo dành cho nhiều đối tượng. Kèm theo đó là dịch vụ gói
+                    quà,
+                    tặng quà giấu tên, ghi thiệp.</p>
+
+            </div>
+            <div class="col-md-6">
+                <div class="ltext">
+
+                    <h1><b>T</b></h1><b>rực tuyến</b>
+
+                </div>
+                <p>Đặt quà, thanh toán trên môi trường internet. Dù bạn có ở bất kỳ đâu, và bất kỳ thời gian nào bạn đều
+                    có thể đặt quà.</p>
+            </div>
+        </div>
+    </div>
+    <div class="ctla">
+        <div class="container">
+            <div class="row ctla-text">
+                <div class="col-md-12">
+                    <h3>" Chúng tôi là ai ? "</h3>
+                    <i>Chúng tôi là người thực hiện sứ mệnh tạo ra những khoảnh khắc hạnh phúc bằng cách mang đến những
+                        món Quà Tặng Đặc Biệt.</i>
+                    <br>
+                    <i>Tạo ra những giá trị là nụ cười của người nhận quà và hạnh phúc của người trao gửi chứ không
+                        phải là một dịch vụ chuyển quà đơn thuần mới chính là Quà Trực Tuyến.</i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row text-center">
+            <div class="col mt-3 thanhlap">
+                <b>Thành Lập Năm 2012</b>
+                <p>Là đơn vị đi tiên phong trong lĩnh vực quà tặng.</p>
+                <p>Thành quả của 8+ năm Quatructuyen.com đồng hành cùng khách hàng.</p>
+            </div>
+        </div>
+        <div class="row thanhlap-mt mt-4">
+            <div class="col-md-4 thanhlap-mota">
+                <img src="https://cdn-icons-png.flaticon.com/128/2639/2639570.png" alt="">
+                <h3><b>2 Cửa Hàng Offline</b></h3>
+                <h3><b></b></h3>
+                <p>- C3 Pandora 53 Triều Khúc, Quận Thanh Xuân, Hà Nội <br>
+                    - 71A Trần Huy Liệu, F11, Quận Phú Nhuận, Tp.HCM</p>
+            </div>
+            <div class="col-md-4 thanhlap-mota">
+                <img src="https://cdn-icons-png.flaticon.com/128/324/324687.png" alt="">
+                <h3><b>3450 Món Quà</b></h3>
+                <h3><b></b></h3>
+                <p>trên hệ thống Website
+                    dành cho mọi đối tượng, lứa tuổi, mọi dịp lễ...</p>
+            </div>
+            <div class="col-md-4 thanhlap-mota">
+                <img src="https://cdn-icons-png.flaticon.com/128/4212/4212257.png" alt="">
+                <h3><b>56800 Đơn Đặt Hàng</b></h3>
+                <h3><b></b></h3>
+                <p>được trao gửi cho khách hàng khắp trên 64 tỉnh thành tổ quốc.</p>
+            </div>
+        </div>
+    </div>
+    <div class="ctla mt-5">
+        <div class="container">
+            <div class="row ctla-text">
+                <div class="col-md-12">
+                    <h3 style="width: 270px;">"Tại Sao Chọn Chúng Tôi? "</h3>
+                    <i>Giữa thế giới quà tặng bao la ngoài kia tại sao lại là Quà Trực Tuyến ?Vâng, là Quà Trực Tuyến
+                        chứ không phải nơi khác vì...</i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center gt mt-5">2 GIÁ TRỊ LÀM NÊN QUÀ TRỰC TUYẾN</div>
+    <div class="text-center oval">Sự Yên Tâm Người Gửi!</div>
+    <div class="text-center l mb-5">Quà Trực Tuyến mang đến cho khách hàng sự yên tâm bởi:</div>
+    <div class="container ac">
+        <div class="row">
+            <div class="col-md-6" style="text-align: center;">
+                <div class="anh">
+                    <img src="https://anh.quatructuyen.com/media/catalog/product/cache/1/small_image/370x370/9df78eab33525d08d6e5fb8d27136e95/_/-/_-03_2_1.jpg"
+                        alt="">
+                </div>
+
+            </div>
+            <div class="col">
+                <div class="conten">
+                    <div class="anh1">
+                        <img src="https://cdn-icons-png.flaticon.com/128/2639/2639570.png" alt="">
+                    </div>
+                    <div class="conten1">
+                        <h5 style="margin-bottom: 0;">8 Năm Trong Nghề</h5>
+                        <p>Hơn 8 năm hoạt động trên thị trường với sự tin tưởng và ủng hộ của hơn 50.000 khách hàng</p>
+                    </div>
+                </div>
+                <div class="conten">
+                    <div class="anh1">
+                        <img src="https://cdn-icons-png.flaticon.com/128/67/67808.png" alt="">
+                    </div>
+                    <div class="conten1">
+                        <h5 style="margin-bottom: 0;">2 Cửa Hàng Tại Hà Nội & Hồ Chí Minh</h5>
+                        <p>Nơi bạn có thể trải nghiệm tận tay, nhìn tận mắt từng sản phẩm và được tiếp đón như người
+                            thân trong gia đình.</p>
+                    </div>
+                </div>
+                <div class="conten">
+                    <div class="anh1">
+                        <img src="https://cdn-icons-png.flaticon.com/128/25/25276.png" alt="">
+                    </div>
+                    <div class="conten1">
+                        <h5 style="margin-bottom: 0;">Dõi theo hành trình món quà tặng
+                        </h5>
+                        <p>Đơn đặt quà của bạn tại web sẽ được gọi điện xác nhận -> Được xem h/a món quà trước và sau
+                            khi gói bọc vận chuyển đến tay người nhận -> Nhận MVĐ theo dõi lộ trình.</p>
+                    </div>
+                </div>
+                <div class="conten">
+                    <div class="anh1">
+                        <img src="https://cdn-icons-png.flaticon.com/128/3282/3282224.png" alt="">
+                    </div>
+                    <div class="conten1">
+                        <h5 style="margin-bottom: 0;">Tặng Quà Giấu Tên</h5>
+                        <p>Với dịch vụ này đảm bảo rằng người nhận quà sẽ có 1 bất ngờ thú vị.</p>
+                    </div>
+                </div>
+                <div class="conten">
+                    <div class="anh1">
+                        <img src="https://cdn-icons-png.flaticon.com/128/726/726532.png" alt="">
+                    </div>
+                    <div class="conten1">
+                        <h5 style="margin-bottom: 0;">Đổi Quà</h5>
+                        <p>Chỉ tại Quà Trực Tuyến, bạn sẽ được đặc quyền đổi quà nếu người nhận KHÔNG THÍCH.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="text-center oval mt-5 mb-3">Cảm Xúc Của Người Nhận!</div>
+    <div class="text-center l">Mọi hành động ở Quà Trực Tuyến đều bắt đầu từ sứ mệnh:</div>
+    <div class="text-center l">Tạo ra giá trị là nụ cười của người nhận quà và hạnh phúc của người tặng.</div>
+    <div class="text-center l">Những món quà tặng đến từ Quà Trực Tuyến đưa người nhận trải qua 1 hành trình cảm xúc:
+    </div>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="conten" style="float: inline-end;margin-top: 10px;">
+                    <div class="conten1">
+                        <h5 style="margin-bottom: 0;">Bất Ngờ</h5>
+                        <p>Sự bất ngờ từ cuộc gọi thông báo ( giấu tên người gửi )
+                        </p>
+                    </div>
+                    <div class="anh1">
+                        <img src="https://cdn-icons-png.flaticon.com/128/2955/2955890.png" alt="">
+                    </div>
+                </div>
+                <div class="conten" style="float: inline-end;margin-top: 10px;">
+                    <div class="conten1">
+                        <h5 style="margin-bottom: 0;">Hồi Hộp</h5>
+                        <p>Sự háo hức, hồi hộp mong chờ món quà
+                        </p>
+                    </div>
+                    <div class="anh1">
+                        <img src="https://cdn-icons-png.flaticon.com/128/2893/2893811.png" alt="">
+                    </div>
+                </div>
+                <div class="conten" style="float: inline-end;">
+                    <div class="conten1">
+                        <h5 style="margin-bottom: 0;">Ấn Tượng</h5>
+                        <p> Sự chỉn cho của gói quà trên từng milimet : Giấy gói, ruy băng, cách gói độc đáo.
+                        </p>
+                    </div>
+                    <div class="anh1">
+                        <img src="https://cdn-icons-png.flaticon.com/128/739/739231.png" alt="">
+                    </div>
+                </div>
+                <div class="conten" style="float: inline-end;">
+                    <div class="conten1">
+                        <h5 style="margin-bottom: 0;">Vỡ Òa</h5>
+                        <p>Cảm xúc nghẹn ngào của người nhận khi mở hộp quà, vỡ òa khi đọc thiệp.
+                        </p>
+                    </div>
+                    <div class="anh1">
+                        <img src="https://cdn-icons-png.flaticon.com/128/10370/10370298.png" alt="">
+                    </div>
+                </div>
+                <div class="conten" style="float: inline-end;">
+                    <div class="conten1">
+                        <h5 style="margin-bottom: 0;">Hạnh Phúc</h5>
+                        <p>Cảm xúc của người nhận khi trải nghiệm món quà.
+                        </p>
+                    </div>
+                    <div class="anh1">
+                        <img src="https://cdn-icons-png.flaticon.com/128/535/535234.png" alt="">
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-6" style="text-align: center;">
+                <div class="anh">
+                    <img src="https://anh.quatructuyen.com/media/catalog/product/cache/1/small_image/370x370/9df78eab33525d08d6e5fb8d27136e95/0/d/0da4657ab5fa6ca435eb.jpg"
+                        alt="">
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="text-center mt-5 mb-5" style="width: 400px;margin: 0 auto;">
+        <i>99 % những xúc cảm trên hành trình đến trái tim người nhận Quà Trực Tuyến đã hoàn thành. 1% nhiệm vụ còn lại
+            là dành cho bạn nhé ^^. </i>
+    </div>
+    <div class="container mn">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="text-center gt" style="margin: 40px 0 10px 0;color: #cc1f3d;">ĐẶT QUÀ NGAY NHÉ!</div>
+                <hr style="color: #CC1F3D;width: 50%;margin: 10px auto;">
+                <div class="text-center l">Hãy để Quà Trực Tuyến có cơ hội thực hiện sứ mệnh của mình. </div>
+                <div class="text-center l">Trải nghiệm Quatructuyen.com và hãy đặt niềm tin nơi chúng tôi.</div>
+
+            </div>
+            <div class="col-md-4">
+                <div class="asl">
+                    <div class="in">
+                        <a href="gsinh.html">QUÀ GIÁNG SINH</a></div>
+                </div>
+                <div class="asl1">
+                    <div class="in">
+                        <a href="#">QUÀ GIA ĐÌNH</a></div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="asl2">
+                    <div class="in">
+                        <a href="#">QUÀ THẦY CÔ</a></div>
+                </div>
+                <div class="asl3">
+                    <div class="in"><a href="#">QUÀ SINH NHẬT</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer pt-4">
+        <div class="container">
+            <div class="img-logo text-center mb-3">
+                <a href="index.html">
+                    <img style="max-width: 400px;"
+                    src="https://anh.quatructuyen.com/media/wysiwyg/quatt/logo/logo_quatructuyen_w.png" alt="">
+                </a>
+                
+            </div>
+            <div class="row ctt">
+                <div class="col ct">
+                    <div class="center">
+                        <div class="diachi">
+                            <img src="https://cdn-icons-png.flaticon.com/128/25/25694.png" alt="">
+                            <p style="font-weight: bold;">Vinh University Campus 1, Bến Thủy, Vinh, Nghệ An</p>
+
+                        </div>
+                        <div class="diachi">
+                            <img src="https://cdn-icons-png.flaticon.com/128/2354/2354127.png" alt="">
+                            <p>0838.555.888</p>
+                        </div>
+
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d2925.869189999476!2d105.69523031089146!3d18.65909232632354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e2!4m0!4m5!1s0x3139cddf0bf20f23%3A0x86154b56a284fa6d!2zVmluaCBVbml2ZXJzaXR5LCBMw6ogRHXhuqluLCBC4bq_biBUaOG7p3ksIFZpbmgsIE5naGUgQW4!3m2!1d18.6590436!2d105.6957497!5e1!3m2!1sen!2s!4v1733549277457!5m2!1sen!2s"
+                            width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+                </div>
+                <div class="col ct">
+                    <div class="center">
+                        <div class="diachi">
+                            <img src="https://cdn-icons-png.flaticon.com/128/25/25694.png" alt="">
+                            <p style="font-weight: bold;">Vinh University Campus 2, QL46, Vinh, Nghệ An</p>
+                        </div>
+                        <div class="diachi">
+                            <img src="https://cdn-icons-png.flaticon.com/128/2354/2354127.png" alt="">
+                            <p>0385.555.333</p>
+                        </div>
+                    </div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d2535.8329398432443!2d105.69404189567341!3d18.758794509176596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e2!4m0!4m5!1s0x3139d3d37a05c553%3A0x24791a9777e6ba47!2sVinh%20University%2C%20Campus%202%2C%20QL46%2C%20Nghi%20%C3%82n%2C%20Vinh%2C%20Nghe%20An!3m2!1d18.7588956!2d105.6943584!5e1!3m2!1sen!2s!4v1733567377936!5m2!1sen!2s" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <hr>
+            <div class="row t">
+                <div class="col">
+                    <div class="text-center w">
+                        <img src="https://cdn-icons-png.flaticon.com/128/542/542689.png" alt="">
+                        <div class="e">
+                            <a href="#">Email: info@quatructuyen.com</a>
+                        </div>
+                    </div>
+                    <div class="text-center w">
+                        <img src="https://cdn-icons-png.flaticon.com/128/7710/7710466.png" alt="">
+                        <div class="e">
+                            <a href="#">Website: http://Quatructuyen.com</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="text-center bct">
+                        <img src="https://cdn-icons-png.flaticon.com/128/5968/5968299.png" alt="">
+                        <img src="https://cdn-icons-png.flaticon.com/128/15716/15716449.png" alt="">
+                        <img style="width: 100px;"
+                            src="https://dangkywebvoibocongthuong.com/wp-content/uploads/2021/11/logo-da-dang-ky-bo-cong-thuong.png"
+                            alt="">
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <a href="index.html">
+        <button class="pfixed">
+            XEM QUÀ NGAY
+        </button>
+    </a>
+
+</body>
+
+</html>

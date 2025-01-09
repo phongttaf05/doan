@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết sản phẩm</title>
+    <link rel="icon" type="image/x-icon" href="images-removebg-preview.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /*header*/
+        .head {
+            background-color: #CC1F3D;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .head img {
+            width: 80%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            margin-left: 20px;
+            cursor: pointer;
+        }
+
+        .vuong {
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            padding: 0;
+            background-color: #99172E;
+            border-radius: 5px;
+            margin-left: 0px;
+            cursor: pointer;
+            width: 160px;
+        }
+
+        .vuong p {
+            font-size: smaller;
+            margin: 0;
+
+        }
+
+        .vuong img {
+            width: 15px;
+            filter: invert(1);
+
+        }
+
+        .conten {
+            display: flex;
+            margin-left: 0px;
+            gap: 25px;
+            justify-content: center;
+        }
+
+        .t {
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .t:hover {
+            color: aqua;
+        }
+
+        .dropdown-menu {
+            border-radius: 0;
+            padding: 10px 20px 10px 10px;
+            width: 15%;
+        }
+
+        .dropdown-header {
+            font-size: 100%;
+            font-weight: bold;
+            color: black;
+        }
+
+        .dropdown-item {
+            font-size: 90%;
+            font-weight: lighter;
+        }
+
+        .icon img {
+            width: 20px;
+            filter: invert(1);
+            cursor: pointer;
+            margin-left: 15px;
+        }
+
+        .icon {
+            margin-left: 0px;
+
+        }
+
+        /*end-header*/
+        /*than*/
+        .link-page {
+            padding: 10 0 10 0;
+        }
+
+        .link-page a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: black;
+        }
+
+        .gioithieu-sp {
+            font-weight: bolder;
+            font-size: 120%;
+        }
+
+        .menhgia p,
+        h5 {
+            display: inline;
+        }
+
+        .menhgia {
+            margin: 10px 0 10px 0;
+        }
+
+        .button {
+            text-align: center;
+            background-color: #f68c04;
+            border-radius: 5px;
+            padding: 20px 0 5px 0;
+            color: white;
+            cursor: pointer;
+            border: #f68c04 solid 1px;
+            transition: 0.3s;
+            margin-bottom: 10px;
+        }
+        .button:hover {
+            background-color: white;
+            color: #f68c04;
+
+        }
+        a{
+            text-decoration: none;
+        }
+        .button h5 {
+            font-weight: bold;
+        }
+
+        .mota-ship {
+            border: #CC1F3D 1px dashed;
+            padding: 10px 0 10px 5px;
+            font-weight: bold;
+        }
+
+        .thanhtoan {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+
+        }
+
+        .thanhtoan img {
+            width: 40px;
+            cursor: pointer;
+        }
+
+        .tgcq {
+            display: flex;
+            gap: 10px;
+        }
+
+        .tgcq h5 {
+            color: #CC1F3D;
+            font-weight: bold;
+        }
+
+        .tgcq p {
+            margin: 0;
+        }
+
+        .text {
+            font-weight: bold;
+            font-size: 120%;
+            color: white;
+            background-color: #e25a72;
+            padding: 10px 0 10px 0;
+        }
+
+        .diachi1 {
+            display: flex;
+            align-items: center;
+            color: #CC1F3D;
+        }
+
+        .diachi1 img {
+            width: 15px;
+            margin-right: 5px;
+        }
+
+        .pn {
+            display: flex;
+            align-items: center;
+            color: #CC1F3D;
+        }
+
+        .pn img {
+            width: 15px;
+            margin-right: 5px;
+        }
+
+        .chitietmq img {
+            width: 100%;
+        }
+
+        .ltext {
+            font-weight: bold;
+            font-size: 120%;
+        }
+
+        .thuoctinh-t {
+            display: flex;
+            align-items: center;
+            margin: 0;
+        }
+
+        .thuoctinh-t b {
+            width: 40%;
+        }
+
+        .thuoctinh-t p {
+            width: 60%;
+        }
+
+        .textud {
+            color: #CC1F3D;
+            font-weight: bold;
+        }
+
+        .uudai {
+            border: #c7c8c9 solid 1px;
+            padding: 0 0 0 15px;
+
+        }
+
+        .uudai-img {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .uudai-img img {
+            width: 15px;
+        }
+
+        .nhanxet {
+            color: white;
+            background-color: #3399cc;
+            width: 250px;
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+            padding: 10px;
+            cursor: pointer;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-bottom: 25px;
+        }
+
+        .hili {
+            color: #CC1F3D;
+            font-weight: bold;
+        }
+
+
+
+        /*footer*/
+        .footer {
+            background-color: #CC1F3D;
+            text-align: center;
+            color: white;
+            padding: 20px 20px 90px 20px;
+        }
+
+        .footer img {
+            width: 100%;
+            padding: 20px 20px 10px 20px;
+        }
+
+        .footer hr {
+            height: 2px;
+        }
+
+        .ytfb {
+            display: flex;
+            justify-content: center;
+        }
+
+        .ytfb img {
+            width: 20%;
+            filter: invert(1);
+        }
+
+        .trai {
+            padding: 40px 20px 20px 20px;
+            text-align: start;
+        }
+
+        .trai strong {
+            margin-bottom: 35px;
+        }
+
+        .cham1 {
+            width: 5px;
+            height: 5px;
+            background-color: white;
+            margin-right: 5px;
+        }
+
+        .cham {
+            display: flex;
+            align-items: center;
+        }
+
+        .champ:hover {
+            margin-left: 5px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .httt {
+            display: flex;
+            gap: 10px;
+        }
+
+        .httt img {
+            width: 30px;
+            padding: 0;
+        }
+
+        .diachi {
+            display: flex;
+            align-items: center;
+        }
+
+        .cham a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .cham a:hover {
+            color: white;
+        }
+
+        /*end-footer*/
+        .t:hover .dropdown-menu {
+            display: block;
+        }
+
+        /**/
+        .pfixed {
+            position: fixed;
+            right: 10px;
+            bottom: 60px;
+            float: right;
+            padding: 7px 9px;
+            border: 1px solid rgb(212, 212, 212);
+            background-color: white;
+            transition: all 0.3 ease-in-out;
+        }
+
+        .pfixed:hover {
+            border: #ce3f56 solid 1px;
+            box-shadow: 1px 1px 5px #e25a72;
+            background-color: #f9e2e4;
+
+        }
+
+        .pfixed img {
+            width: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row head">
+            <div class="col-md-3 col-7 img">
+                <a href="index.html"><img
+                        src="https://anh.quatructuyen.com/media/wysiwyg/quatt/logo/logo_quatructuyen_w.png"
+                        alt="logo_quatructuyen_w"></a>
+            </div>
+            <div class="col-md-2 col-5 dd">
+                <div class="vuong" data-bs-toggle="dropdown">
+                    <img src="https://cdn-icons-png.flaticon.com/128/484/484167.png" alt="cdn-icons-png">
+                    <p>Nơi nhận quà<img style="width: 15px;" src="https://cdn-icons-png.flaticon.com/128/32/32195.png"
+                            alt=""></p>
+                </div>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Tp.Hà Nội</a></li>
+                    <li><a class="dropdown-item" href="#">Tp.Hồ Chí Minh</a></li>
+                    <li><a class="dropdown-item" href="#">Tỉnh thành khác</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-5 conten">
+                <div class="t">
+                    <div class="t" data-bs-toggle="dropdown">Nhân ngày gì?</div>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <h5 class="dropdown-header">Ngày Lễ</h5>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="gsinh.html">Giáng Sinh Noel</a></li>
+                        <li><a class="dropdown-item" href="#">Tết</a></li>
+                        <li><a class="dropdown-item" href="#">Ngày nhà giáo VN</a></li>
+                        <li><a class="dropdown-item" href="#">Valentine</a></li>
+                        <li>
+                            <h5 class="dropdown-header">Sự Kiện</h5>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Sinh nhật</a></li>
+                    </ul>
+                </div>
+                <div class="t">
+                    <div class="t" data-bs-toggle="dropdown">Bạn tặng ai?</div>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Gia đình</a></li>
+                        <li><a class="dropdown-item" href="#">Thầy cô</a></li>
+                        <li><a class="dropdown-item" href="#">Người yêu</a></li>
+                    </ul>
+                </div>
+                <div class="t">
+                    <div class="t" data-bs-toggle="dropdown">
+                        LuvGift
+                    </div>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Phụ kiện LuvGift</a></li>
+                        <li><a class="dropdown-item" href="#">Tự tạo hộp quà</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2 col-12 icon">
+                <img src="https://www.iconpacks.net/icons/2/free-search-icon-2907-thumb.png" alt="">
+                <a href="ttoan.html"><img style="width: 21px;"
+                        src="https://cdn-icons-png.flaticon.com/128/3514/3514491.png" alt=""></a>
+                <a href="dn.html"><img src="https://cdn-icons-png.flaticon.com/128/456/456212.png" alt=""></a>
+
+
+            </div>
+        </div>
+
+    </div>
+    <div class="container link-page mt-1 mb-3">
+        <a style="color: rgb(109, 109, 109);" href="trangchu.html">Trang chủ</a> /<a style="color: rgb(92, 92, 92);" href="#">Chi tiết sản phẩm</a>
+    </div>
+    <div class="container gioi-thieu">
+        <div class="row">
+            <div class="col-md-5">
+                <!-- Carousel -->
+                <div id="demo" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+
+                    <!-- Indicators/dots -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                    </div>
+
+                    <!-- The slideshow/carousel -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://anh.quatructuyen.com/media/catalog/product/cache/1/image/480x480/9df78eab33525d08d6e5fb8d27136e95/1/_/1_7.jpg"
+                                alt="Los Angeles" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://anh.quatructuyen.com/media/catalog/product/cache/1/image/480x480/9df78eab33525d08d6e5fb8d27136e95/2/_/2_1_1.jpg"
+                                alt="Chicago" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://anh.quatructuyen.com/media/catalog/product/cache/1/image/480x480/9df78eab33525d08d6e5fb8d27136e95/4/a/4a.jpg"
+                                alt="New York" class="d-block w-100">
+                        </div>
+                    </div>
+
+                    <!-- Left and right controls/icons -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="gioithieu-sp">Quà tặng LuvGift Dịu Dàng</div>
+                <div class="menhgia">
+                    <p style="font-size: small;font-weight: lighter;"><del>218.000 ₫</del></p>
+                    <h5 style="color:#CC1F3D;">188.000 ₫</h5>
+                </div>
+                <hr>
+                <a href="ttoan.html">
+                    <div class="button">
+                        <h5>Chọn quà này</h5>
+                        <p>Mua Online-Chuyển quà tận tay</p>
+                    </div>
+                </a>
+
+                <div class="mota-ship">
+                    Cho đơn hàng từ 300k (không áp dụng ship hỏa tốc)
+                </div>
+                <div class="text-center pay">
+                    <p style="font-weight: bold;">Thanh Toán An Toàn Qua:</p>
+                    <div class="thanhtoan">
+                        <img src="https://cdn-icons-png.flaticon.com/128/5968/5968299.png" alt="">
+                        <img src="https://cdn.haitrieu.com/wp-content/uploads/2022/10/Logo-MoMo-Square.png" alt="">
+                    </div>
+                    <div class="thanhtoan">
+                        <img src="https://cdn-icons-png.flaticon.com/128/9618/9618751.png" alt="">
+                        <img src="https://cdn-icons-png.flaticon.com/128/17250/17250519.png" alt="">
+                    </div>
+                    Hoàn tiền nếu đơn hàng không được thực hiện!
+                </div>
+            </div>
+            <div class="col">
+                <div class="tgcq">
+                    <img src="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAABECAYAAAA1DeP1AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAAsSAAALEgHS3X78AAAAB3RJTUUH4QoSATgyf+ZifgAAHFVJREFUeNrFe3mUXEd57++rqtu399n3RbJkbSPJluVVlmW8gQ3BYTMOEAhhMQSOA+T5veTkHHi8wMnj8Qhb7PACyAFiCMGA7dgcsOUNCVmyLFu7NFpGM5oZzb70dE8vd63v/XG7Z3oWLfbB9j3nztyuqq5b9atv+X1fVdN9D+3FzCUEKD+N6MgQxFQKtgqhY9dvK6Yrq29uO3P6fW3dnVvCViY53rzkWP+aLQ+Hx3sfPvLRvx6mZDXSza0grQEjBHSfAHp6wCKEZZ17kYlWovHMSZxYdx0MNwUjFMUlXccwsPZK2O2XIF/TiDf7UosXMzzDRDQ1vrFmfOh/X/+H/7o9zD58AAxgaV/n5qV9nZt72tZ8Mjo5em+utnHHhV7ERHANEyATCJlgEm/23C8ABDOcSBy1Z7re+5bHtn67bbyv3QJggYJ6AjwAxAKX9neuj33/Kz977gvfuHuqpX23sgogEgAIXNalHY6BtF7V2nf80og10SLMaFq5dqcdiR9iojcbg4VAEDOcWBLVJ468562/euDHDVOjiTwJAAxiQIFhcCAVDnzkIdAwdKb1yq1f+3/jy9e81TfNMc93QdqFAuCYEbhGeMXy43s/tOz0gbsbX+jpCLEHDWC0cdmZQiL5L73N73mAiSxifi3j/6NdctN7Pw0UV9uNxlDRc+rqt/3gK//eMjFQWyAAzBAAQgDyZtLqX9ZxJG9GvWQ2lVRgOBCoSQ01ZkTU7t94/fNuPg1KT8BnAy1HX/nTK19+6v4rDjz7ocrsZB2g4RdfnMimKpeceOVt+VA8PrDh+m1Ca0AQQG/OrUz2AAAsBIxCPn7Vb3/235eO9DQ7RXAkGD6AA5v+9Ke5RM1PbLb7q4b6E2frlt3U3n/kfzSkhuvBwMqXn37/2WvfsrVgUO94VR3W7nrkEzc/vvXr9blUjQ3AJwpEiQBigkeMEDOueeLBL6SWrDg22rHhh9D6zZOIm9/zcQgw2Ayj7si+GzY+/uMvRuyc6RKBmKENQx+4+a5vpuuW/F2upqEzPtIzkUinBvubV+06+Na79jYfP3B70s4mQtlMVT6UHOi5Zsvulv07P3LnQ996oCo/VVEAQYAQAkMBMABwERENAZM9xAZ61nZtefvDyi5khe/izbiVyloAAM0Gqs72diQyo0kPABiQAE6t3rRz/+f+4UvmyLDV/ttHASIwASG7gHR92/Y9777ni7f/5KsPRp2CrEiPrqs5dfK6W356/5cr8+mYRYBihiPDXv/Stb/rbV3xnFGYXHbZoRc+ErVylT4xXAZqR/ta2w7vv73QcfVP4LlvikSI2NAQYkNDiA8MIpIarys5NQLDAdB9+13f0yHTcmIJsBBgKaGlAVYKyrWQrar9+dErbntSAqg9eeDtN/7onx5qG+pZ7gIgIdG/dO3BnXd87HZfqLsdZX730Nvuuu/5D3zhK44R8RQDDILhOKGGw6/coUNhkBBvyq1y1VUAACeaQCGezGAGCEALxdPJir6KYwcBZgzdeAuq9v0BQ2uvQaZ9NZKODae+udB9053f6zjw3O1tAycb3UCY4IXC+uRlmx7ad/en/65mz94RTynkapuRX77WTZE4VojGpsLpQi2IIZgBK72kr60WoZz5pkiEsisqAQBeJIbJliXHspFKq6owFbYBKO1Rxdm+a7vuumc3SQU9MYbGp5+AV1WPiQ0bIT0PTARrtPHAWHXryJKJvkYBQCvTP7Lh5h/qiPF5CHJcCJzouBL9HesgsznjkoO73hFPT9R6IIAZDGK7or47nnOhCm+OwVSw7UDnBSG1ct2evsuufbp2z1N3EggSQMeTP//s2Wtu+VkkmxrzHRdePIHw6RNYvu1RTLdfAqU1tG1lU0tXHlo20dfoA9h7690Pdd9wx9/Uv/ScE+/pgZe3oBISDBHf8NiP77t6xyOfUWB4JCAYsA2Th6/e/ItQdgqwLGjPg6C5pOx1B6JqRSNCjoeh0wOgqqrJQ7d/8P/WdR25tmVioN4CobHv2IoN3//qt8Zb2v9KSiNnxSuhpcQVv9oKkhL7r7sFla7nuTV1owaAzo5NL7507//6+7qeo9akWYP6vXvR37oSISdz3ebf/ORzG/c++UEBwAZBsIYB4Oi1t27Ptbc/o3pPI95ch8jSRji2gzeSdKrEqnY0gRGtMJGZyONsombn03d9/tN/8otv/aBharjOBnDZy9s+3FW4Rh278V1fUo7TJe0CrGQVWjv3o+/OD0END+ums2fWj9U1j53ZcP3ft297dHj9Yw/icMcWWMmq6zqO7fzzlsnedzaO9i31ANgkIFkjDOD0JesO9C7b8BlD+4WqLVcgXleNUFM9svkC6A1EQvm2AwobaFrWgIo6B7WNSZyJxR771eSnpja/8Muvrh/svEGwxqojL34glsuuHa9v//nJDTc8ykIe90IheKYJ33c+tOTkvvXphtae6OhAZdW+Pbe6EJvWH9t5fTI31VE1ObhEArAReIkwBwxz78bbfjMdr/7bqg+864Sub0CsuQYCBCebg3a9NxQI+peuFFpNBd+zQZCgkAErlUHBJ0TTkw3Wl7/y8VV7nv54Y37yUhOAI6Q3UVU3qEXogLSdgZHGprbW4d4ticxkhScN1w+ZKSZBwnOrTacgCYCLwAup4vNwZcuxk9fd/s903xcejifDKWppAXse2PdgGAZcBgqO+8YC8UBXCu2mSvqenQQLrRkQhoRhKHggJ9U3otHVvaz26MHbavbvfmdtz4nNkdQIvPQ02LGhtA9GQKGJuRSjgoAgbJcSMl4Jr7HRG12+ftfI1df/OrXx2uflktazyZqkIsMwdKEA1gyAyTAMz2FM5h3XfUOB+FF36oa3Vol/U4Q6Bs31XUQgKTVL5WspbXb9kMhN1xpRU+X/4R/hfeufAN8FYd6AKYhk/dYliN1/P9Sa1fCqK30vXjEmpLKFdsPk+ZJ9f35SQphCqGM5//vdWe9/hgTl3ygg1Pqk+eGkclc4PoAFC8CA7wK+N1sSCUHEYqBkEkwBDWcAIAa42AETNBiUSMK45SZwNAxl2dLw7Ea4NsqirzkvZQCKNJpN3GOQ8agkfuH1BsCQAkQEpcGkizkGnNNzl5X7Ohi6nt92ETFmDWRzgJSA1vN654V9A9AAmETAfF8n1WBmmGYIRtRET98ELMuBYmYNMF61057fnCmYFM2f22zBgqpFmxEowGPe4AFlSJhhE+y6eM10ixlGPIKTnX3IHDqMl5wKTGnjXDnLi0CgLKNEAVMGgcDMRTUpTYxnv3LeAc4+8HyUGTDDIUyns9jx210It7XAUwZeS1aLlYHY2CAOPv0HZHbvQvyDH0esqR0q0FVadJSLriAteJixEVxc0VkAin3j/NI29z0LTC9kSMHO5vHI1/8NI5oQWe+jEORBXz0Q4SgiO3eAe0+joqkeWkoAgCJwcXX/CPpICOwCSs6gOL0LrNz5aokIhWwev/z6Vgwd7UH15o2QpgGE1GsDIiQRiUdhmybYt2bKBZgFzU+tlwnJOeEpkwyaMxuxcGqEOfwC5+s30CkBDhaIAPiui6HuswjHIoHqvQ6XGhufzKxsSYBYBgTogi/iwAPokp8pd5vBHyoKOwPwS231+fslAgQIRIRsLm+N5VzHkBKcnUbX5++DUbcGsDy8Xpc6Ppn/aSiXWh8jboSSK8OGESkNeXErz2DHRSiTQQyBeV+wVUMIwmvXweDgMHQ2C/j+eQfCzLBsZ0CS7j+D5K97RnIHledAf+driIyNA/WvL8tUHuNgT96+I+nz6rqa6sdWNdWu8ghgzSgHBGWrLKqrUUgk4KGcUBVh42BSGoBUCk0N9eDKBOD5s96k1C8BzAQpCNlcAXu7B39UsPJfGrfymHzsKfDBV1BLNqAMONKAkoApFfA6ZCpUYG4EXBXkIw0lQSTAzCW3HhDAstcrAI4UmBHU4v5H2Yfik4ARMsCGUfQg8+ZQ/CyFgGG4YCnpYFcKpx//HeqdnIxW1tRZmZGmkNYVS6YGapAtRHPp2pd1uKPzQqr2qoFIkoZUBmyQENDQzNDgObZivtnQ88qomISlMs9ZmigzI+BsvHAhZ5yKhhDQY1pOp8YzLZvssb9q8ArNMUJbFNlLTTddX3n0+ZiUhCPuyJGX2pf/pb9k+Ssin3tVRJCYoZUBbYYXTEpVCA8MAdvX5dxnwWAX9rqwSUCmMMuwmBc2PsflSeWY2em1dx59/rsb+/e9z3Z9eIJQCIWQS1ZifEkbktlpXH329LqRHb+598xdn/5M2AhZrP0L9j07WwPybDeMQy8hFa4ALHu2SpdcJ836uPNS4XPDHXgPxqwuXSQ3YRJgImNV16H3VRx8Idrd1Ib85RuA9laI5hbI1jaI2hpMPLUNiQe+g8vPHH73ZF/XD7Fmwy6yLj5AZTOCUCYF2X0cfPkWYJZGLE6xLwqEmUblul+KNUoFC/nEuV5AxDI2ORLN+AKFv/4cErfdDOQKIKkgpICMmBjeeCW6a+rRMTFcWde5791DS1fuNZThBiTuAsNVCmqwF5FnHkWhomqBavwRDinwwo/nEASaj8089dIEsKEQrkgipAxI1wOsAjiXg5fOYIAVTjQuQ8g0cemhHZ+Qg33rWKlZNTzfTQTK5yAmRgEhF4ztNQRdrx0sXrx4FqQSMo4Ldl2w1oHACYKVszA2lUN++Wp093SiI5+qPnTqwF0jnn1I+u75DQUJyIlRJLc9DlRWLtrkj3xsZb44nJtQn9d6zGf8RJjKZJFNZ+GuXIGumkZEwiF07N/+UcN12igahzAj577DEYRe2nlelT8nEBc0c2UNZlezSDpK+neeThZ40nI1mfHBXDQ/hOGJKfiFAmRNLQZWr8WQMtAxPdKSHBl4bylZtPhNoP7eC7rZcwJxQYM5h0gQiBZT/ouLPhdgVgYsEWA7LsbGp6AEQfqMzKVr0G3EUBmLYPnO331Bat0gfYb09dzb8yHDYdD2Zy84hvOqxoWzCKV5zrLQRdvQxfRSVlAubUJgbDyNXM6ClBJk5UEtzThd24aUFthgj7WF+7o+6CYTcBPz7qoqeEcOAUK8OomY7/0vNotAc7zlIm7zAkH3nIeyrCGBwCCcHR4r9iEA34MhFSau2IgzvkBdRQKXvvzsp52qqqgXi8GLx4M7FoNf3wDddQJwHFzomgMEFSexGADnxbP8C1yWfHg1uYMFTJVBgpDLW5hMT0PIYp6DBJDPw1+1Bt01DciBsLYwtiq2a/vHpGVBZbNQ2SwMx4X//JPgXDF5fGEgSit44fWfAwbNeoRybjUHmMWCrFeBjJCE0YkpOI4/J4FHngcZDmNwVQfGLQ/10QiteOmZexgiSp4H8jwQM3hsOJCGi4hHxOJDODcYCz/MBZDm5yjL01fnw5rnPhIBvs8YGk0hCPbL6gkQBQtWx+XokiYgBdbZqRXxQ3vvlrE4QrEYcj1dsKemQOriqJKY62wuPN5zLN7MF2ey2HM6ughRKKMcxICSCpNTGUxOpSHE/D4IwvEgamvR3bYM6ek8GkwRbe986SMuCVNrDd+2X5VqLmIs+ZzDnls+fwnLGpVIAV2c2Z3TorS3IQRGxqfg+3q2do4d0RCui+xVm9HvAWZIYdVo39XyZOf7Jx0HueFBiIuUhgVAlDJR50rh82KFM5MvjZAuzu3QYtyhCIKUsGwHYxMZMIuifdCA5mAvgxkgDbIt8JIl6G5qh227aDN1YsXJPX+Wtx3hhGOwpIJNEhaEYZGstplW2hDXWCTXW0Y4rMtiDrVgdItu3S0+kbkNFonhZ1JztOCr8/M05dgpQyGVySKbt4MASUmABFhQELILAgf6Ah2OonfzLej5z63oaKjE6sHTm/u3P/414en+ZGa8NWrnYiaQMF2rOmI6rYY/3eB42emz3a/sHTJjj1qxxCNkhOYDUU5rL3CVr+Cc+ZZt+/HiorFo3zSrmjoSQX/eQxoSQgGCdUCkChbgOiDPBfkelOfCsF0YkyOwhYCjDDT5XtXdZw//rZIEgwARJkghIcmCSCqEfRuUc2Dnx1Yddeldz7343CWFlZd9U80YFGYw00U40kUQKeXoFsvHXKTLZCbANBGBj+EfPAjTCGPd+DjCrCEdByHHQdRxEWIXkjWE7we360BqjaqqJGxfQyiJikQ0kBYiMBF8ZmgiCNfHsbSHzqZaNDNw7dREQv/+4a8+G03sVXOsNTHoXCMvT76UTXAmIVWqn6MaF0ZjpoYBGAbiIQN1u19A0rWBgg/P8+GyD5IEkgytGZb2gnJXw9UebNaoq6lHx/Ll0HDhzOYOg/4JINvHkZPDOHpjO975nbU4tnsC+7YyNuTtyLHuzntUmUCc/2hAuTGch8d5veQFxGvGuhBDCYmx1BQOnB1AOKkQWx6FNgja1yh05zE97gbWnYPkcul1PoBQLlek+gsVWxCQmZrGmUIOK97TjnXtJiJGFDt+I+GnEmgZOX2lEkX6KbiIoBCQQkL7/lz7Vxzx7MAXk5Zy8QgGJURwdrvkSkth9YxhIUAIAliDmeF5Gr7vIXp5I55fsRZDOQOVER9vqz2B/G+7UYpA5l/nPkvBYCIoQyGkgfyEjYLWyOQBYWsIAkKCpZoeGQ/cUtgkO6rU2PgkZCRSBGJm2IEOU7BxQ2YY2nbmaMMcVIoVvvaRns6CBQcbPDPT4LL/AAuBiWwWAgxDCWgA2ZOT2KyOwCeCJMA5ORVsGp3Tks8a5jneHAD7jFhVFJe31uOFn5/GjytNeKfyWD/sIGoycio+pfY+9gw810XVJe0D9XfdemognVnuptLFvmleSr546sXTqMpmUV8GUmlypU1AAUbW99E3OgqvEC/b8ltkJkRwVAiJUAyCBBQImcE8jMH8zPQCEBae1VpI9csALmvqAWhsq8Qd0x6OfvMU6k2gzdTIeR78quoBFZ0YhgbFaO/Abf1dL8NvawDbzuwZF2Zo1vB8fyZzxLEYpvbswaQGAk5Gxd9yMRiy6EEJbnoa0//xH/DD4dkt/KJeEc/dUpymEBJjE1gSjQCCIPRci0Xlu2nnUss5CrGwwPE1wnGJm5OEVCaPvoE0VD6H7PIbu1Tk2H6wVHXRiZFv6rGe9h7MPd1gAwgDqAuZSMZjICLk8xbOFnI4hoCRyaL7LCkSF/VfTAyBvnf/ebMTpToNoKGhGUZrC0gIoBy4kmue44Xm7aOWNQMAIQWECEIpzQz2AhvkgzHlC6SmXfgFD2x7yISjw4odB1pBkxmyjLLOGIE1XlZbi+XNTagAQefzAAuIRgOWaaB3IoVTfX3QzFAzWrRwgHMFt1zRAtA1gvhSmqGietEcQjqjoTPueeGWXHkOQwoJbzqHwlQa0BpGOAyzugKsQtDah225sHIWlJLwDBMIRzIq+WcfhTU+6llPPGy7CE7GllZobftSrG5tRubMME7J2MBg85pHfZKpmonhm1rGh7asba1BTTyOvZ3H4Wh/gfGcTy+wyHPpvwbgMxdPG8110WW5MCwqBjNSoKCdAsZP92LAj0ym65c+Oh0Nj1SkJ69oOdz79obmCsQaG5CbnoLruTAI8KWC09gyoGTrEsQkVtdEVU0ykYCnDPhaoyZRgRXNTeg/NeS/suGmbx+/4qrvpfTkcpmbWmnQ2q3NqdzPN23f9sXL6sPNG1auQu/gEKQImFy55Z5ZwGJ5aTGD2Ixm8mFaaySiUWjW5+FfvOgjEOx9sGVhoHsIB9o3Pnjqlrf/nxQVmmwnu8awCqcbJjKPXLX7hc9f1je4TpghKEPBYB/5SMSBYfSpaGr8w3e8+MS/htrrov6ShiLQAsqQGOjsx64tb/323k1XfYMH++4Pnzn4DmhWniTv9OqrHyq03fsZ46F/fmj9pTXJ1obaYNe7/MzR+U+czJ0IAKUUJqfSICGCn00Vz1kAmNmdJ17YZeDJfEz1jvL+9Vv+fe9ffuJzuX3PfNXoOXQP+Z7hKuX3tq95Iv8Xn7ov/OADP7oiguaq1S0I2TY8RLIMZORnL1n65eX9Jy+3QyYV06OQkuCk0uhEsvfwf/vih3O9h79kHt7xiaq6plB9U7OycrkQD5+5Or/huh8Z41nZ3Nt5RawmCdbn2F+gc+05zI13mTUMKVEVT6CxugqNVdVoqKxAbTKJymgMyWgYiWgMiUgYsbCJqBlGWCmElUJSSmSSzQMvf/Szn5pKdf+52vvkl5OJhNnS1qas6WxIpEZXFNqWdol48x9aD+56W7yuEqZVwKloY++Jq27+V9W7rGPbpT1Hb1DaizEREwAlFHIT0zS+6rKnpqenKnB83z3Jmka85R1/gpalS/DcE4/j6O4XYEwMvSV11XW/yRzd8f5KEtC0+ErPRpYXFg5hSNTX1QS/4KHS0bSy0zgAWOuZcyLMDGgf9mSadle07pqOqEn3xZ0fqYrFcP3tb8fy1Wvw8vYd2PP7Z009NXTNyIpV/zi2szZVl7fCQ0Y81b1m43e9kJlRx1eu+0HTma4zl3ftawr7tgYUQkwQnpa+jB6wjh9aoexCtO6SZahurMdkNoNINA4hBDxoXWhu3k4w7o26xA4EAG8BEKQXAsGLgVa0H9r3it4kaCSKaDIYRATBBE0MUeo1JEEQMlSwDxkDp9YV0hPrOpYtQ01jM6ZyOSQqkmAGfN8XqUT4iFNZ/UnPztb8Yf21J9KR2A6pfSjDdbguPf5UOpLAtiveibBtQ0FienkKo3VN8BORG0OkMDY8hIFTpwFBOH30MGCYWjVc8kwhXDHx7G3v+sn+6iR8Agi6yMMEWDOINDwpg92wsklL7c85OatB8KWcyzGK9cr3MZPAFTzjSwUVk/ACcJc7GNEKnlO4KR5N5kaGBpMDp7sQTybwyosvQEoB0bBk23R1Tf65m9/5SMWJ3aifHEYuXoM8M+jeX/weoe4zyJlh/H7NJphWAcQaJAWS7jTCVi6S2P7wU6G+Y1soUQ2hPTjZDPyrbv1ebu1Nn/co5I1JBc9xwSL41S8EwFrC9zSIPBQiYZCYTeAQEcKODVGk3USARwJWyARmEgE8s4MWKRQAhCBIgIUPhgdiQJAqipYHKImoV0B1ZixW0b1vKw5u/4ARrwBAcApZ8OprHs5cdefHCoaZn0zW4PLuY0hOjSOdrIFdWQd6x8N7MG5Eg58tWxYYMIm5nsExAVrqE9zI1HBLbP+2j6vB402+EZXOqs3H8h3XfsNmOguP8wRtsNZgQYVSwplZku9pJvK1L6BFecBJBMk8YyeJAJ+ZNYhBougZNEppW6k1ASFZBIIYPhPDFCRDYJKADlCWivxI1I5Ojb4jdmT7J43hM5UsjQavfU3aWrvpvRmzalT5bkpKSjtGFEwE6Xsg3wPd+Iu9EEAIzB9gX/8FHLdF+07c9/WTAvrXWsghFnKIXJsN14qwlORHkmnPcwskhBAQHrMWgTEQfkm0BZiCXyZwMWIpP1NVMqBUFtEz5kdLJWLFQBCrl5prZjALDtiIgGsHwT8JYiLBkGED2kAhEwKLdj+SiJIkXzDfQ1JeLQw1DGX+J0hsBZADALr1l68UNY9btOcvha+bWftVWnOa2D+imYaYQBrSZMOwCJrgOc3QuhpEGpo1mDUIYZB0CNBFC2EHuRPWCEIsYmaX5hHkEuWYIWCzAS8LIqNEHUgQMYHAJEnDZNYxDQ4RkAEJj0ACgIRAhkCnASEgRFQIIl9rJXz/UilEAoISLNSwFsYhACMIIgn8f+U28K4MvxgKAAAAAElFTkSuQmCC"
+                        alt="">
+                    <div class="tqcq-t">
+                        <h5>Thời Gian Chuyển Quà</h5>
+                        <p>- <strong>Trong ngày </strong>tại: <strong>Hà Nội , Tp. HCM</strong></p>
+                        <p>- <strong>2-5 ngày </strong>tại Khu vực khắc (*)</p>
+                    </div>
+                </div>
+                <div class="text-center text mt-3 mb-3">Cửa hàng đang còn</div>
+                <strong>Bạn có thể mua trực tiếp tại <p
+                        style="background-color:#CC1F3D;width: 80px;display: inline;color: white;padding: 0 3px 0 3px;">
+                        cửa hàng</p></strong>
+                <div class="diachi1"><img src="https://cdn-icons-png.flaticon.com/128/25/25694.png" alt="">
+                    Vinh University Campus 1, Vinh, Nghệ An</div>
+                <div class="pn"><img src="https://cdn-icons-png.flaticon.com/128/483/483947.png" alt="">0838.555.888</div>
+                <div class="dk">(*) Trong điều kiện liên lạc hẹn được người nhận.</div>
+            </div>
+        </div>
+    </div>
+    <div class="container ">
+        <div class="row">
+            <div class="col-md-8 chitietmq">
+                <div class="text-center text mt-4 mb-3 pt-2 pb-2">Chi tiết món quà</div>
+                <b><i>Để dành tặng nàng dịu dàng thì còn gì tuyệt vời hơn set quà tặng từ Luvgift gồm khăn lụa, cốc giữ
+                        nhiệt lúa mạch điểm thêm bông hồng thắm tươi dưới đây. Món quà thích hợp tặng bạn gái, người
+                        yêu, cô giáo và đồng nghiệp nữ nhân ngày đặc biệt.
+                    </i></b>
+                <img src="https://anh.quatructuyen.com/media/wysiwyg/Gift-set/luvt10/1_1.png" alt="">
+                <div class="dacdiem">
+                    <div class="ltext">Đặc điểm nổi bật của Quà tặng LuvGift Dịu Dàng</div>
+                    <p>- <b>Kích thước hộp quà:</b> Dài 23 rộng 18 cao 7cm</p>
+                    <b>- Bộ quà tặng gồm: </b>
+                    <p style="margin-left: 10px;">1 Cốc giữ nhiệt lúa mạch Màu ngẫu nhiên <br><br>
+
+                        1 Khăn lụa vuông 70cm (Giao mẫu ngẫu nhiên)<br><br>
+
+                        5 Bông hoa hồng sáp <br><br>
+
+                        1 Thiệp chúc mừng<br><br>
+
+                        1 Hộp đựng quà tặng bìa cứng Kraft</p>
+                    <img src="https://anh.quatructuyen.com/media/wysiwyg/Gift-set/luvt10/2_2.jpg" alt="">
+                    <p><b>Cốc giữ nhiệt lúa mạch</b> <br><br>
+
+                        - Chất liệu: Nhựa sinh học + Lúa mì nguyên chất<br><br>
+
+                        - Dung tích: 300ml/ly<br><br>
+
+                        - Kích thước : 7cm * 16,5cm (± 0,5mm)<br><br>
+
+                        - Không sản sinh ra các chất độc hại khi đựng nước nóng, hoặc tráng trần qua nước sôi, hơn nữa
+                        còn có các thành phần than hoạt tính ngăn chặn sự sinh sôi và xâm nhập của vi khuẩn.<br><br>
+
+                        - Dùng được trong lò vi sóng, máy rửa chén bát<br><br>
+
+                        - Không chứa BPA (một chất gây ung thư)<br><br>
+
+                        Cốc giữ nhiệt lúa mạch an toàn cho sức khỏe và thân thiện với môi trường. Món quà tặng ý nghĩa
+                        và thiết thực để dành tặng bạn bè đồng nghiệp.</p>
+                    <img src="https://anh.quatructuyen.com/media/wysiwyg/Gift-set/qua_tang_luvgift_co_nang_cong_so_22.jpg"
+                        alt="">
+                    <p>
+                        <b>Khăn lụa vuông 70cm</b><br><br>
+
+                        - Chất liệu: Vải Lụa<br><br>
+
+                        - Kích thước khăn: 70x70cm<br><br>
+
+                        Khăn được làm từ chất liệu vải lụa mềm mại tạo nên nét đẹp dịu dàng, thanh lịch cho bạn gái khi
+                        đeo. Chất liệu tự nhiên của lụa giúp bảo vệ, nâng niu làn da tránh các tác động của môi
+                        trường.<br><br>
+
+                        Với khăn lụa vuông, bạn có thể biến hóa thành quý cô kiêu sa, cô nàng công sở thanh lịch, nhẹ
+                        nhàng hay cô gái mộng mơ. Khăn lụa vuông không quá to và dài như khăn choàng, chính vì vậy nàng
+                        có thể thỏa sức biến hóa. Nào là buộc thõng hai vạt trước ngực hay Buộc thắt nút đơn giản, quàng
+                        cổ chữ V cách điệu, quàng khăn thủy thủ, thắt lệch vai…
+                    </p>
+                    <img src="https://anh.quatructuyen.com/media/wysiwyg/Gift-set/luvt10/5_2.jpg" alt="">
+                    <div class="ltext">Quà tặng Luvgift - Dành tặng nàng dịu dàng</div>
+                    <p>
+                        Bộ quà Luvgift Dịu dàng với cốc giữ nhiệt lúa mach an toàn tiện lợi, khăn lụa mềm mại yêu kiều
+                        cho mọi nét đẹp như được dịp toả sáng để nàng tận hưởng trọn vẹn nguồn cảm hứng mới mỗi
+                        ngày.<br><br>
+
+                        Hãy giúp nàng dịu dàng tự tin toả sáng với vẻ đẹp thanh lịch, rạng rỡ mỗi khi ra ngoài bằng món
+                        quà mà Luvgift đã tỉ mỉ chuẩn bị giúp chàng nhé.
+                    </p>
+                    <img src="https://anh.quatructuyen.com/media/wysiwyg/Gift-set/luvt10/1_4.jpg" alt="">
+                    <img style="margin-top: 5px;"
+                        src="https://anh.quatructuyen.com/media/wysiwyg/Gift-set/luvt10/4a_1.jpg" alt="">
+                    <p>Quà tặng Luvgift Dịu Dàng sẽ cùng bạn trao gửi những thông điệp yêu thương tới một nửa thế giới
+                        xinh đẹp một cách đặc biệt ý nghĩa và trọn vẹn. <br><br>
+
+                        Vậy còn chần chờ gì mà không chọn ngay món quà này nào. </p>
+                </div>
+            </div>
+            <div class="col thuoctinh">
+                <div class="text-center text mt-4 mb-3 pt-2 pb-2">Thuộc tính món quà</div>
+                <hr>
+                <div class="thuoctinh-t">
+                    <b>Dành cho</b>
+                    <p>Cô giáo, Vợ, Đồng nghiệp Nữ, bạn gái, Người yêu</p>
+                </div>
+                <hr>
+                <div class="thuoctinh-t">
+                    <b>Phong cách</b>
+                    <p>Đơn giản</p>
+                </div>
+                <hr>
+                <div class="thuoctinh-t">
+                    <b>Nhân dịp</b>
+                    <p>Ngày 20/11, Ngày 20/10, Ngày 8/3, Valentine 14/2, Sinh nhật, Yêu xa</p>
+                </div>
+                <hr>
+                <div class="thuoctinh-t">
+                    <b>Phương thức sản xuất </b>
+                    <p>Handmade</p>
+                </div>
+                <hr>
+                <div class="uudai mb-2">
+                    <div class="text-center textud mt-2 mb-2 ">ƯU ĐÃI ĐẶC QUYỀN</div>
+                    <div class="uudai-img">
+                        <img src="https://cdn-icons-png.flaticon.com/128/66/66834.png" alt="">
+                        <p><b>Chuyển quà sau 3h</b> đến nội thành Hà Nội, TP.HCM</p>
+                    </div>
+                    <div class="uudai-img">
+                        <img src="https://cdn-icons-png.flaticon.com/128/66/66834.png" alt="">
+                        <p><b>Tặng thiệp </b>miễn phí cho tất cả các đơn hàng (phần chọn thiệp sau khi chọn quà)</p>
+                    </div>
+                    <div class="uudai-img">
+                        <img src="https://cdn-icons-png.flaticon.com/128/66/66834.png" alt="">
+                        <p><b>Tặng thiệp </b>▢Ghi thiệp theo yêu cầu (phần hoàn tất đơn hàng)</p>
+                    </div>
+                    <div class="uudai-img">
+                        <img src="https://cdn-icons-png.flaticon.com/128/66/66834.png" alt="">
+                        <p><b>7 ngày </b>Đổi miễn phí nếu người nhận không thích món quà</p>
+                    </div>
+                </div>
+                <img style="width: 100%;"
+                    src="https://anh.quatructuyen.com/media/wysiwyg/banner-khuyen-mai/tu-tao-hop-qua.jpg" alt="">
+            </div>
+        </div>
+        <div class="text-center mt-5">Bạn nghĩ gì về món quà này</div>
+        <div class="text-center nhanxet mt-3">VIẾT NHẬN XÉT/ ĐÁNH GIÁ</div>
+        <div class="hili mb-3">=>Nếu những món quà trên Bạn chưa Ưng ý. Hãy tự tạo hộp quà ấn tượng theo cách của mình
+            nhé.</div>
+        <img style="width: 100%; margin-bottom: 15px;"
+            src="https://anh.quatructuyen.com/media/wysiwyg/banner/banner-tu-tao-hop-qua_1.jpg" alt="">
+    </div>
+
+    </div>
+
+
+    </div>
+
+    <div class="container-fluid ">
+        <div class="row footer">
+            <div class="col-md-4">
+                <a href="index.html"><img
+                        src="https://anh.quatructuyen.com/media/wysiwyg/quatt/logo/logo_quatructuyen_w.png"
+                        alt="logo_quatructuyen_w"></a>
+                <p>Quatructuyen.com cung cấp những món quà tặng lưu niệm ý nghĩa, gói gém và trao gửi một cách trân
+                    trọng. Bạn có thể chọn mua Quà trực tiếp tại cửa hàng, Hoặc đặt quà Online để được chuyển trực tiếp
+                    đến người nhận trong ngày tại Hà Nội, TpHCM và từ 2-5 ngày với khu vực khác trên Toàn Quốc.</p>
+                <hr>
+                <i>Kết nối với chúng tôi qua:</i>
+                <div class="ytfb">
+                    <img src="https://cdn-icons-png.flaticon.com/128/1384/1384031.png" alt="">
+                    <img src="https://cdn-icons-png.flaticon.com/128/20/20837.png" alt="">
+                    <img src="https://cdn-icons-png.flaticon.com/128/1077/1077046.png" alt="">
+                </div>
+            </div>
+            <div class="col-md-2 trai">
+                <strong>Về Quatructuyen.com</strong>
+                <div class="cham">
+                    <div class="cham1"></div>
+                    <a href="gioithieu.html">
+                        <div class="champ">Giới thiệu</div>
+                    </a>
+
+                </div>
+                <div class="cham">
+                    <div class="cham1"></div>
+                    <div class="champ">Dịch vụ</div>
+                </div>
+                <div class="cham">
+                    <div class="cham1"></div>
+                    <div class="champ">Blog quà tặng</div>
+                </div>
+                <div class="cham">
+                    <div class="cham1"></div>
+                    <div class="champ">Liên hệ</div>
+                </div>
+
+            </div>
+            <div class="col-md-2 trai">
+                <strong>Khách Hàng</strong>
+                <div class="cham">
+                    <div class="cham1"></div>
+                    <div class="champ">Hỏi đáp</div>
+                </div>
+                <div class="cham">
+                    <div class="cham1"></div>
+                    <div class="champ">Cước phí vận chuyển</div>
+                </div>
+                <div class="cham">
+                    <div class="cham1"></div>
+                    <div class="champ mb-1">Hướng dẫn đặt hàng</div>
+                </div>
+                <strong>Hình thức thanh toán</strong>
+                <div class="httt">
+                    <img src="https://cdn-icons-png.flaticon.com/128/5968/5968299.png" alt="">
+                    <img src="https://cdn.haitrieu.com/wp-content/uploads/2022/10/Logo-MoMo-Square.png" alt="">
+                </div>
+                <div class="httt" style="filter:invert(1);">
+                    <img src="https://cdn-icons-png.flaticon.com/128/9618/9618751.png" alt="">
+                    <img src="https://cdn-icons-png.flaticon.com/128/17250/17250519.png" alt="">
+                </div>
+            </div>
+            <div class="col trai">
+                <strong>Địa chỉ cửa hàng</strong>
+                <div class="diachi">
+                    <img style="width: 15px;filter: invert(1);float: inline-start;padding: 0;margin-right: 5px;"
+                        src="https://cdn-icons-png.flaticon.com/128/69/69524.png" alt="">
+                    <div style="font-weight: 500;">Vinh University Campus 1, Bến Thủy, Vinh, Nghệ An</div>
+                </div>
+                <div class="diachi">
+                    <img style="padding: 0;margin-right: 5px; width: 15px;filter: invert(1);float: inline-start;"
+                        src="https://cdn-icons-png.flaticon.com/128/483/483947.png" alt="">
+                    <div style="font-weight: 500;font-size: 80%;">0838.555.888</div>
+                </div>
+                <hr style="font-weight: bold;">
+                <div class="diachi">
+                    <img style="width: 15px;filter: invert(1);float: inline-start;padding: 0;margin-right: 5px;"
+                        src="https://cdn-icons-png.flaticon.com/128/69/69524.png" alt="">
+                    <div style="font-weight: 500;">Vinh University Campus 2, QL46, Vinh, Nghệ An</div>
+                </div>
+                <div class="diachi">
+                    <img style="padding: 0;margin-right: 5px; width: 15px;filter: invert(1);float: inline-start;"
+                        src="https://cdn-icons-png.flaticon.com/128/483/483947.png" alt="">
+                    <div style="font-weight: 500;font-size: 80%;">0385.555.888</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <a href="#top">
+        <button class="pfixed">
+            <img src="https://cdn-icons-png.flaticon.com/128/3838/3838683.png" alt="">
+        </button>
+    </a>
+
+</body>
+
+</html>

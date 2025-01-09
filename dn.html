@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng nhập</title>
+    <link rel="icon" type="image/x-icon" href="images-removebg-preview.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: #eeeff3;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .head {
+            background-color: #CC1F3D;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .head img {
+            width: 80%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            margin-left: 20px;
+            cursor: pointer;
+        }
+
+        .vuong {
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            padding: 0;
+            background-color: #99172E;
+            border-radius: 5px;
+            margin-right: 10px;
+            cursor: pointer;
+            width: 160px;
+        }
+
+        .vuong p {
+            font-size: smaller;
+            margin: 0;
+
+        }
+
+        .vuong img {
+            width: 15px;
+            filter: invert(1);
+
+        }
+
+        .conten {
+            display: flex;
+            margin-left: 0px;
+            gap: 25px;
+            justify-content: center;
+        }
+
+        .t {
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .t:hover {
+            color: aqua;
+        }
+
+        .dropdown-menu {
+            border-radius: 0;
+            padding: 10px 20px 10px 10px;
+            width: 15%;
+        }
+
+        .dropdown-header {
+            font-size: 100%;
+            font-weight: bold;
+            color: black;
+        }
+
+        .dropdown-item {
+            font-size: 90%;
+            font-weight: lighter;
+        }
+
+        .icon img {
+            width: 20px;
+            filter: invert(1);
+            cursor: pointer;
+            margin-left: 15px;
+        }
+
+        .icon {
+            margin-left: 0px;
+
+        }
+
+        /**/
+        .dangnhap {
+            padding: 40px 15px 40px 15px;
+            color: rgb(85, 84, 84);
+            background-color: white;
+            margin-bottom: 100px;
+            border-left: 1px solid whitesmoke;
+        }
+
+        .textl {
+            font-weight: bold;
+            font-size: larger;
+        }
+
+        .dangnhap button {
+            background-color: #CC1F3D;
+            color: white;
+            border: #CC1F3D;
+            font-weight: bold;
+        }
+
+        .dangnhap button:hover {
+            background-color: black;
+        }
+
+        .dangnhap input {
+            border-radius: 0;
+        }
+
+        .ht {
+            display: flex;
+            margin-bottom: 30px;
+            gap: 20px;
+        }
+
+        /*footer*/
+        .footer {
+            background-color: #CC1F3D;
+            text-align: center;
+            color: white;
+            padding: 20px 20px 90px 20px;
+        }
+
+        .footer img {
+            width: 100%;
+            padding: 20px 20px 10px 20px;
+        }
+
+        .footer hr {
+            height: 2px;
+        }
+
+        .ytfb {
+            display: flex;
+            justify-content: center;
+        }
+
+        .ytfb img {
+            width: 20%;
+            filter: invert(1);
+        }
+
+        .trai {
+            padding: 40px 20px 20px 20px;
+            text-align: start;
+        }
+
+        .trai strong {
+            margin-bottom: 35px;
+        }
+
+        .cham1 {
+            width: 5px;
+            height: 5px;
+            background-color: white;
+            margin-right: 5px;
+        }
+
+        .cham {
+            display: flex;
+            align-items: center;
+        }
+
+        .champ:hover {
+            margin-left: 5px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .httt {
+            display: flex;
+            gap: 10px;
+        }
+
+        .httt img {
+            width: 30px;
+            padding: 0;
+        }
+
+        .diachi {
+            display: flex;
+            align-items: center;
+        }
+        .cham a{
+            text-decoration: none;
+            color: white;
+        }
+        .cham a:hover{
+            color: white;
+        }
+
+        /*end-footer*/
+        .t:hover .dropdown-menu {
+            display: block;
+        }
+        .pfixed {
+            position: fixed;
+            right: 10px;
+            bottom: 60px;
+            float: right;
+            padding: 7px 9px;
+            border: 1px solid rgb(212, 212, 212);
+            background-color: white;
+            transition: all 0.3 ease-in-out;
+        }
+
+        .pfixed:hover {
+            border: #ce3f56 solid 1px;
+            box-shadow: 1px 1px 5px #e25a72;
+            background-color: #f9e2e4;
+            
+        }
+        .pfixed img{
+            width: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row head">
+            <div class="col-md-3 col-7 img">
+                <a href="index.html"><img src="https://anh.quatructuyen.com/media/wysiwyg/quatt/logo/logo_quatructuyen_w.png"
+                    alt="logo_quatructuyen_w"></a>
+            </div>
+            <div class="col-md-2 col-5 dd">
+                <div class="vuong" data-bs-toggle="dropdown">
+                    <img src="https://cdn-icons-png.flaticon.com/128/484/484167.png" alt="cdn-icons-png">
+                    <p>Nơi nhận quà<img style="width: 15px;" src="https://cdn-icons-png.flaticon.com/128/32/32195.png"
+                            alt=""></p>
+                </div>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Tp.Hà Nội</a></li>
+                    <li><a class="dropdown-item" href="#">Tp.Hồ Chí Minh</a></li>
+                    <li><a class="dropdown-item" href="#">Tỉnh thành khác</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-5 conten">
+                <div class="t">
+                    <div class="t" data-bs-toggle="dropdown">Nhân ngày gì?</div>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <h5 class="dropdown-header">Ngày Lễ</h5>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="gsinh.html">Giáng Sinh Noel</a></li>
+                        <li><a class="dropdown-item" href="#">Tết</a></li>
+                        <li><a class="dropdown-item" href="#">Ngày nhà giáo VN</a></li>
+                        <li><a class="dropdown-item" href="#">Valentine</a></li>
+                        <li>
+                            <h5 class="dropdown-header">Sự Kiện</h5>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Sinh nhật</a></li>
+                    </ul>
+                </div>
+                <div class="t">
+                    <div class="t" data-bs-toggle="dropdown">Bạn tặng ai?</div>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Gia đình</a></li>
+                        <li><a class="dropdown-item" href="#">Thầy cô</a></li>
+                        <li><a class="dropdown-item" href="#">Người yêu</a></li>
+                    </ul>
+                </div>
+                <div class="t">
+                    <div class="t" data-bs-toggle="dropdown">
+                        LuvGift
+                    </div>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Phụ kiện LuvGift</a></li>
+                        <li><a class="dropdown-item" href="#">Tự tạo hộp quà</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2 col-12 icon">
+                <img src="https://www.iconpacks.net/icons/2/free-search-icon-2907-thumb.png" alt="">
+                <a href="ttoan.html"><img style="width: 21px;"
+                    src="https://cdn-icons-png.flaticon.com/128/3514/3514491.png" alt=""></a>
+                
+                    <a href="dn.html"><img src="https://cdn-icons-png.flaticon.com/128/456/456212.png" alt=""></a>
+                
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <div class="text-center" style="font-size: x-large;margin:40px 0 10px 0;color: rgb(85, 84, 84);font-weight: bold;">
+        ĐĂNG NHẬP</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="dangnhap">
+                    <div class="textl" style="margin-bottom: 30px;">ĐĂNG NHẬP TÀI KHOẢN CỦA BẠN</div>
+                    <div class="texts" style="margin-bottom: 20px;">Đăng nhập tài khoản của bạn để khám phá tất cả các
+                        tính năng tuyệt vời trong cửa hàng của chúng tôi.</div>
+                    <form action="/action_page.php">
+                        <input type="text" class="form-control form-control-lg" placeholder="Địa chỉ email">
+                        <input type="password" class="form-control form-control-lg" placeholder="Mật khẩu"
+                            style="margin: 30px 0;">
+                        <div class="form-check mb-3">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="checkbox" name="remember"> Ghi nhớ đăng nhập
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Đăng nhập</button>
+                    </form>
+                </div>
+
+            </div>
+            <div class="col">
+                <div class="dangnhap">
+                    <div class="textl" style="margin-bottom: 30px;">BẠN CHƯA CÓ TÀI KHOẢN? ĐĂNG KÍ NGAY</div>
+                    <div class="texts" style="margin-bottom: 20px;">Hãy tạo cho mình một tài khoản, bạn sẽ nhận được các
+                        ưu
+                        đãi bất ngờ mà chỉ thành viên mới có.</div>
+                    <div class="ht">
+                        <input style="background-color: #f6f6f6;" type="text" class="form-control form-control-lg" placeholder="Họ">
+                        <input style="background-color: #f6f6f6;" type="text" class="form-control form-control-lg" placeholder="Tên">
+                    </div>
+                    <div class="ht">
+                        <input style="background-color: #f6f6f6;" type="text" class="form-control form-control-lg" placeholder="Địa chỉ email">
+                        <input style="background-color: #f6f6f6;" type="text" class="form-control form-control-lg" placeholder="Số điện thoại">
+                    </div>
+                    <div class="ht">
+                        <input style="background-color: #f6f6f6;" type="password" class="form-control form-control-lg" placeholder="Mật khẩu">
+                        <input style="background-color: #f6f6f6;" type="password" class="form-control form-control-lg" placeholder="Nhập lại mật khẩu">
+                    </div>
+                    <div class="form-check mb-3">
+                        <label class="form-check-label">
+                            <input style="background-color: #f6f6f6;" class="form-check-input" type="checkbox" name="remember"> Tôi muốn nhận đề nghị qua
+                            email
+                        </label>
+                    </div>
+                    <input style="background-color: #f6f6f6;" type="text" class="form-control form-control-lg mt-5 mb-4" placeholder="Địa chỉ">
+                    <div class="ht">
+                        <input style="background-color: #f6f6f6;" type="text" class="form-control form-control-lg" placeholder="Chọn tỉnh/ thành phố">
+                        <input style="background-color: #f6f6f6;" type="text" class="form-control form-control-lg" placeholder="Quận huyện">
+                    </div>
+                    <p>(Nếu bạn ở nước ngoài, vui lòng chọn một địa chỉ ở Việt Nam)</p>
+                    <div class="form-check mb-3">
+                        <label class="form-check-label">
+                            <input class="form-check-input" type="checkbox" name="remember"> Tôi không phải robot
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="padding:5px 20px 5px 20px">Đăng kí</button>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid ">
+        <div class="row footer">
+            <div class="col-md-4">
+                <a href="index.html"><img src="https://anh.quatructuyen.com/media/wysiwyg/quatt/logo/logo_quatructuyen_w.png"
+                    alt="logo_quatructuyen_w"></a>
+                <p>Quatructuyen.com cung cấp những món quà tặng lưu niệm ý nghĩa, gói gém và trao gửi một cách trân
+                    trọng. Bạn có thể chọn mua Quà trực tiếp tại cửa hàng, Hoặc đặt quà Online để được chuyển trực tiếp
+                    đến người nhận trong ngày tại Hà Nội, TpHCM và từ 2-5 ngày với khu vực khác trên Toàn Quốc.</p>
+                <hr>
+                <i>Kết nối với chúng tôi qua:</i>
+                <div class="ytfb">
+                    <img src="https://cdn-icons-png.flaticon.com/128/1384/1384031.png" alt="">
+                    <img src="https://cdn-icons-png.flaticon.com/128/20/20837.png" alt="">
+                    <img src="https://cdn-icons-png.flaticon.com/128/1077/1077046.png" alt="">
+                </div>
+            </div>
+            <div class="col-md-2 trai">
+                <strong>Về Quatructuyen.com</strong>
+                <div class="cham">
+                    <div class="cham1"></div>
+                    <a href="gioithieu.html"><div class="champ">Giới thiệu</div></a>
+                </div>
+                <div class="cham">
+                    <div class="cham1"></div>
+                    <div class="champ">Dịch vụ</div>
+                </div>
+                <div class="cham">
+                    <div class="cham1"></div>
+                    <div class="champ">Blog quà tặng</div>
+                </div>
+                <div class="cham">
+                    <div class="cham1"></div>
+                    <div class="champ">Liên hệ</div>
+                </div>
+
+            </div>
+            <div class="col-md-2 trai">
+                <strong>Khách Hàng</strong>
+                <div class="cham">
+                    <div class="cham1"></div>
+                    <div class="champ">Hỏi đáp</div>
+                </div>
+                <div class="cham">
+                    <div class="cham1"></div>
+                    <div class="champ">Cước phí vận chuyển</div>
+                </div>
+                <div class="cham">
+                    <div class="cham1"></div>
+                    <div class="champ mb-1">Hướng dẫn đặt hàng</div>
+                </div>
+                <strong>Hình thức thanh toán</strong>
+                <div class="httt">
+                    <img src="https://cdn-icons-png.flaticon.com/128/5968/5968299.png" alt="">
+                    <img src="https://cdn.haitrieu.com/wp-content/uploads/2022/10/Logo-MoMo-Square.png" alt="">
+                </div>
+                <div class="httt" style="filter:invert(1);">
+                    <img src="https://cdn-icons-png.flaticon.com/128/9618/9618751.png" alt="">
+                    <img src="https://cdn-icons-png.flaticon.com/128/17250/17250519.png" alt="">
+                </div>
+            </div>
+            <div class="col trai">
+                <strong>Địa chỉ cửa hàng</strong>
+                <div class="diachi">
+                    <img style="width: 15px;filter: invert(1);float: inline-start;padding: 0;margin-right: 5px;"
+                        src="https://cdn-icons-png.flaticon.com/128/69/69524.png" alt="">
+                    <div style="font-weight: 500;">Vinh University Campus 1, Bến Thủy, Vinh, Nghệ An</div>
+                </div>
+                <div class="diachi">
+                    <img style="padding: 0;margin-right: 5px; width: 15px;filter: invert(1);float: inline-start;"
+                        src="https://cdn-icons-png.flaticon.com/128/483/483947.png" alt="">
+                    <div style="font-weight: 500;font-size: 80%;">0838.555.888</div>
+                </div>
+                <hr style="font-weight: bold;">
+                <div class="diachi">
+                    <img style="width: 15px;filter: invert(1);float: inline-start;padding: 0;margin-right: 5px;"
+                        src="https://cdn-icons-png.flaticon.com/128/69/69524.png" alt="">
+                    <div style="font-weight: 500;">Vinh University Campus 2, QL46, Vinh, Nghệ An</div>
+                </div>
+                <div class="diachi">
+                    <img style="padding: 0;margin-right: 5px; width: 15px;filter: invert(1);float: inline-start;"
+                        src="https://cdn-icons-png.flaticon.com/128/483/483947.png" alt="">
+                    <div style="font-weight: 500;font-size: 80%;">0385.555.888</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <a href="#top">
+        <button class="pfixed">
+            <img src="https://cdn-icons-png.flaticon.com/128/3838/3838683.png" alt="">
+        </button>
+    </a>
+
+</body>
+
+</html>

@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng</title>
+    <link rel="icon" type="image/x-icon" href="images-removebg-preview.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /*header*/
+        .head {
+            background-color: #CC1F3D;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .head img {
+            width: 80%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            margin-left: 20px;
+            cursor: pointer;
+        }
+
+        .vuong {
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            padding: 0;
+            background-color: #99172E;
+            border-radius: 5px;
+            margin-right: 10px;
+            cursor: pointer;
+            width: 160px;
+        }
+
+        .vuong p {
+            font-size: smaller;
+            margin: 0;
+
+        }
+
+        .vuong img {
+            width: 15px;
+            filter: invert(1);
+
+        }
+
+        .conten {
+            display: flex;
+            margin-left: 0px;
+            gap: 25px;
+            justify-content: center;
+        }
+
+        .t {
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .t:hover {
+            color: aqua;
+        }
+
+        .dropdown-menu {
+            border-radius: 0;
+            padding: 10px 20px 10px 10px;
+            width: 15%;
+        }
+
+        .dropdown-header {
+            font-size: 100%;
+            font-weight: bold;
+            color: black;
+        }
+
+        .dropdown-item {
+            font-size: 90%;
+            font-weight: lighter;
+        }
+
+        .icon img {
+            width: 20px;
+            filter: invert(1);
+            cursor: pointer;
+            margin-left: 15px;
+        }
+
+        .icon {
+            margin-left: 0px;
+
+        }
+
+        .carousel-item {
+            transition: opacity 1.5s ease-out;
+        }
+
+        .underhead img {
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            border: #CC1F3D solid 1px;
+            padding: 7px;
+            background-color: #e25a72;
+            margin-top: 10px;
+            width: 100%;
+            margin-top: 50px;
+            margin: 20px auto;
+        }
+
+        .sautext {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .splon {
+            display: flex;
+            text-align: center;
+        }
+
+        .splon img {
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .spbe {
+            display: flex;
+
+        }
+
+        .spbe img {
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .mota {
+            font-weight: bolder;
+            height: 40px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .mota:hover{
+            color: cyan;
+        }
+        .menhgia {
+            color: #CC1F3D;
+            margin-top: 5px;
+            font-weight: bold;
+        }
+
+        .button {
+            border: #CC1F3D solid 1.5px;
+            color: #CC1F3D;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+            cursor: pointer;
+            margin-bottom: 20px;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background-color: #e25a72;
+            color: white;
+        }
+
+        .anh {
+            margin-bottom: 10px;
+        }
+
+        .anh1 {
+            background-image: url('https://static.vecteezy.com/system/resources/previews/007/390/182/non_2x/beautiful-brown-paper-gift-box-with-blue-satin-curly-ribbon-bow-on-pastel-blue-background-mother-day-father-day-valentines-day-birthday-concepts-with-copy-space-free-photo.JPG');
+            height: 300px;
+            width: 100%;
+            background-position: 100%;
+            background-size: cover;
+            position: relative;
+        }
+
+        .anh2 {
+            background-image: url('https://img.freepik.com/premium-photo/pink-gift-box-with-bow-balls-pink-background_889227-15849.jpg?w=740');
+            height: 300px;
+            width: 100%;
+            background-position: 100%;
+            background-size: cover;
+            position: relative;
+        }
+
+        .te1 {
+            position: absolute;
+            font-weight: bolder;
+            margin: 15px 15px;
+        }
+
+        .te2 {
+            position: absolute;
+            margin: 50px 15px;
+            width: 60%;
+        }
+
+        .te4 {
+            position: absolute;
+            right: 15px;
+            top: 50px;
+            width: 60%;
+            text-align: right;
+        }
+
+        /*footer*/
+        .footer {
+            background-color: #CC1F3D;
+            text-align: center;
+            color: white;
+            padding: 20px 20px 90px 20px;
+        }
+
+        .footer img {
+            width: 100%;
+            padding: 20px 20px 10px 20px;
+        }
+
+        .footer hr {
+            height: 2px;
+        }
+
+        .ytfb {
+            display: flex;
+            justify-content: center;
+        }
+
+        .ytfb img {
+            width: 20%;
+            filter: invert(1);
+        }
+
+        .trai {
+            padding: 40px 20px 20px 20px;
+            text-align: start;
+        }
+
+        .trai strong {
+            margin-bottom: 35px;
+        }
+
+        .cham1 {
+            width: 5px;
+            height: 5px;
+            background-color: white;
+            margin-right: 5px;
+        }
+
+        .cham {
+            display: flex;
+            align-items: center;
+        }
+
+        .champ:hover {
+            margin-left: 5px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+
+        .httt {
+            display: flex;
+            gap: 10px;
+        }
+
+        .httt img {
+            width: 30px;
+            padding: 0;
+        }
+
+        .diachi {
+            display: flex;
+            align-items: center;
+        }
+
+        .cham a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .cham a:hover {
+            color: white;
+        }
+
+        .t:hover .dropdown-menu {
+            display: block;
+        }
+        /**/
+        .pfixed {
+            position: fixed;
+            right: 10px;
+            bottom: 60px;
+            float: right;
+            padding: 7px 9px;
+            border: 1px solid rgb(212, 212, 212);
+            background-color: white;
+            transition: all 0.3 ease-in-out;
+        }
+
+        .pfixed:hover {
+            border: #ce3f56 solid 1px;
+            box-shadow: 1px 1px 5px #e25a72;
+            background-color: #f9e2e4;
+            
+        }
+        .pfixed img{
+            width: 20px;
+        }
+        .mota a{
+            text-decoration: none;
+            color: black;
+        }
+        .mota a:hover{
+            color: cyan;
+        }
+        .anh-tt img{
+            width: 100%;
+        }
+        .gia,.sum{
+            color: #CC1F3D;
+            font-weight: bolder;
+            
+        }
+        .sl{
+            border: 1px solid rgb(175, 175, 175);
+            text-align: center;
+            width: 60px;
+        }
+        .b1 button{
+            width: 100%;
+            border: 1px solid;
+            border-radius: 5px;
+            font-weight: bold;
+            background-color: white;
+            padding: 10px 0;
+        }
+        .b2 button{
+            width: 100%;
+            border: 1px solid #CC1F3D;
+            background-color: #CC1F3D;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            padding: 10px 0;
+        }
+        .b1 button:hover, .b2 button:hover{
+            background-color: black;
+            color: white;
+        }
+        .b2{
+            background-color: #efefef;
+            padding: 5px 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row head">
+            <div class="col-md-3 col-7 img">
+                <a href="index.html"><img src="https://anh.quatructuyen.com/media/wysiwyg/quatt/logo/logo_quatructuyen_w.png"
+                    alt="logo_quatructuyen_w"></a>
+            </div>
+            <div class="col-md-2 col-5 dd">
+                <div class="vuong" data-bs-toggle="dropdown">
+                    <img src="https://cdn-icons-png.flaticon.com/128/484/484167.png" alt="cdn-icons-png">
+                    <p>Nơi nhận quà<img style="width: 15px;" src="https://cdn-icons-png.flaticon.com/128/32/32195.png"
+                            alt=""></p>
+                </div>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Tp.Hà Nội</a></li>
+                    <li><a class="dropdown-item" href="#">Tp.Hồ Chí Minh</a></li>
+                    <li><a class="dropdown-item" href="#">Tỉnh thành khác</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-5 conten">
+                <div class="t">
+                    <div class="t" data-bs-toggle="dropdown">Nhân ngày gì?</div>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <h5 class="dropdown-header">Ngày Lễ</h5>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="gsinh.html">Giáng Sinh Noel</a></li>
+                        <li><a class="dropdown-item" href="#">Tết</a></li>
+                        <li><a class="dropdown-item" href="#">Ngày nhà giáo VN</a></li>
+                        <li><a class="dropdown-item" href="#">Valentine</a></li>
+                        <li>
+                            <h5 class="dropdown-header">Sự Kiện</h5>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#">Sinh nhật</a></li>
+                    </ul>
+                </div>
+                <div class="t">
+                    <div class="t" data-bs-toggle="dropdown">Bạn tặng ai?</div>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Gia đình</a></li>
+                        <li><a class="dropdown-item" href="#">Thầy cô</a></li>
+                        <li><a class="dropdown-item" href="#">Người yêu</a></li>
+                    </ul>
+                </div>
+                <div class="t">
+                    <div class="t" data-bs-toggle="dropdown">
+                        LuvGift
+                    </div>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Phụ kiện LuvGift</a></li>
+                        <li><a class="dropdown-item" href="#">Tự tạo hộp quà</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-2 col-12 icon">
+                <img src="https://www.iconpacks.net/icons/2/free-search-icon-2907-thumb.png" alt="">
+                <img style="width: 21px;" src="https://cdn-icons-png.flaticon.com/128/3514/3514491.png" alt="">
+                <a href="dn.html"><img src="https://cdn-icons-png.flaticon.com/128/456/456212.png" alt=""></a>
+
+            </div>
+        </div>
+
+    </div>
+    <div class="container">
+        <h5 class="mt-3 mb-5">CÁC MÓN QUÀ BẠN ĐÃ CHỌN</h5>
+        <div class="row">
+            <div class="col-md-1 col-4 d-none d-md-block">
+                <div>
+
+                </div>
+            </div>
+            <div class="col-md-4 col-8 d-none d-md-block">
+                <div>
+                    <p>TÊN MÓN QUÀ</p>
+                </div>
+                
+            </div>
+            <div class="col-md-2 col-4 d-none d-md-block">
+                <div>GIÁ</div>
+            </div>
+            <div class="col-md-2 col-2 d-none d-md-block">
+                <div>SỐ LƯỢNG</div>
+            </div>
+            <div class="col-md-2 col-4 d-none d-md-block">
+                <div>TỔNG CỘNG</div>
+            </div>
+            <div class="col-md-1 col-1 d-none d-md-block">
+                <div></div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-1 col-4">
+                <div class="anh-tt">
+                    <img src="https://anh.quatructuyen.com/media/catalog/product/cache/1/small_image/370x370/9df78eab33525d08d6e5fb8d27136e95/1/2/12_4.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-md-4 col-8">
+                <div class="tmq">
+                    <p>Set quà tặng giáng sinh luvgift Adorable box luv231</p>
+                </div>
+                
+            </div>
+            <div class="col-md-2 col-4">
+                <div class="gia">375.000 ₫</div>
+            </div>
+            <div class="col-md-2 col-2">
+                <div class="sl">1</div>
+            </div>
+            <div class="col-md-2 col-4 d-none d-md-block">
+                <div class="sum">375.000 ₫</div>
+            </div>
+            <div class="col-md-1 col-1">
+                <div class="x"><button type="button" class="btn-close" aria-label="Close"></button></div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-1 col-4">
+                <div class="anh-tt">
+                    <img src="https://anh.quatructuyen.com/media/catalog/product/cache/1/thumbnail/60x60/9df78eab33525d08d6e5fb8d27136e95/t/h/thiep-kraft-gan-hoa-vintage-4.jpg" alt="">
+                </div>
+            </div>
+            <div class="col-md-4 col-8">
+                <div class="tmq">
+                    <p>Thiệp Kraft gắn hoa vintage</p>
+                </div>
+                
+            </div>
+            <div class="col-md-2 col-4">
+                <div class="gia">5.000 ₫</div>
+            </div>
+            <div class="col-md-2 col-2">
+                <div class="sl">1</div>
+            </div>
+            <div class="col-md-2 col-4 d-none d-md-block">
+                <div class="sum">5.000 ₫</div>
+            </div>
+            <div class="col-md-1 col-1">
+                <div class="x"><button type="button" class="btn-close" aria-label="Close"></button></div>
+            </div>
+        </div>
+        <hr>
+        <div class="text">Chọn thêm Thiệp - Viết thông điệp yêu thương</div>
+        <div class="row spbe text-center">
+            <div class="col-md-3 col-6 col-sm-6 mb-4">
+                <img src="https://anh.quatructuyen.com/media/catalog/product/cache/1/small_image/370x370/9df78eab33525d08d6e5fb8d27136e95/t/h/thiep-kraft-gan-hoa-vintage-4.jpg"
+                    alt="">
+                <div class="mota">
+                    Thiệp Kraft gắn hoa vintage</div>
+                <div class="menhgia">6.000 ₫</div>
+                <div class="button">Chọn quà này</div>
+            </div>
+            <div class="col-md-3 col-6 col-sm-6 mb-4">
+                <img src="https://anh.quatructuyen.com/media/catalog/product/cache/1/small_image/370x370/9df78eab33525d08d6e5fb8d27136e95/_/-/_-05_1_2.jpg"
+                    alt="">
+                <div class="mota">Thiệp chúc mừng giấy trắng cài hoa khô vinatage</div>
+                <div class="menhgia">6.000 ₫</div>
+                <div class="button">Chọn quà này</div>
+            </div>
+            <div class="col-md-3 col-6 col-sm-6 mb-4">
+                <img src="https://anh.quatructuyen.com/media/catalog/product/cache/1/small_image/370x370/9df78eab33525d08d6e5fb8d27136e95/t/h/thiep_3d_7_1.jpg"
+                    alt="">
+                <div class="mota">Thiệp Giáng sinh 3D kèm bao TH05</div>
+                <div class="menhgia">19.000 ₫</div>
+                <div class="button">Chọn quà này</div>
+            </div>
+            <div class="col-md-3 col-6 col-sm-6 mb-4">
+                <img src="https://anh.quatructuyen.com/media/catalog/product/cache/1/small_image/370x370/9df78eab33525d08d6e5fb8d27136e95/t/h/thiep_mien_phi_2_.jpg"
+                    alt="">
+                <div class="mota">Thiệp chúc mừng loại nhỏ</div>
+                <div class="menhgia">0 ₫ <del style="color: rgb(116, 115, 115);margin-left:5px ;"> 5.000 ₫</del></div>
+                <div class="button">Chọn quà này</div>
+            </div>
+            
+        </div>
+        <div class="row mt-5 mb-2">
+            <div class="col-md-4 col-12 mt-md-5 order-md-1 order-3 b1">
+                <a href="trangchu.html"><button >Chọn thêm quà tặng</button></a>
+            </div>
+            <div class="col-md-4 col-12 order-2 order-md-2"></div>
+            <div class="col-md-4 col-12 order-md-3 order-1 b2">
+                <div class="ht">
+                    <h5>TỔNG THANH TOÁN <div class="gia" style="float: inline-end;">186.000 ₫</div></h5>
+                    <hr>
+                </div>
+                
+                <button>Tiến hành thanh toán >></button></div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid ">
+        <div class="row footer">
+            <div class="col-md-4">
+                <a href="index.html"><img src="https://anh.quatructuyen.com/media/wysiwyg/quatt/logo/logo_quatructuyen_w.png" alt=""></a>
+                
+                <p>Quatructuyen.com cung cấp những món quà tặng lưu niệm ý nghĩa, gói gém và trao gửi một cách trân
+                    trọng. Bạn có thể chọn mua Quà trực tiếp tại cửa hàng, Hoặc đặt quà Online để được chuyển trực tiếp
+                    đến người nhận trong ngày tại Hà Nội, TpHCM và từ 2-5 ngày với khu vực khác trên Toàn Quốc.</p>
+                <hr>
+                <i>Kết nối với chúng tôi qua:</i>
+                <div class="ytfb">
+                    <img src="https://cdn-icons-png.flaticon.com/128/1384/1384031.png" alt="">
+                    <img src="https://cdn-icons-png.flaticon.com/128/20/20837.png" alt="">
+                    <img src="https://cdn-icons-png.flaticon.com/128/1077/1077046.png" alt="">
+                </div>
+            </div>
+            <div class="col-md-2 trai">
+                <strong>Về Quatructuyen.com</strong>
+                <div class="cham">
+                    <div class="cham1"></div>
+                    <a href="gioithieu.html">
+                        <div class="champ">Giới thiệu</div>
+                    </a>
+                </div>
+                <div class="cham">
+                    <div class="cham1"></div>
+                    <div class="champ">Dịch vụ</div>
+                </div>
+                <div class="cham">
+                    <div class="cham1"></div>
+                    <div class="champ">Blog quà tặng</div>
+                </div>
+                <div class="cham">
+                    <div class="cham1"></div>
+                    <div class="champ">Liên hệ</div>
+                </div>
+
+            </div>
+            <div class="col-md-2 trai">
+                <strong>Khách Hàng</strong>
+                <div class="cham">
+                    <div class="cham1"></div>
+                    <div class="champ">Hỏi đáp</div>
+                </div>
+                <div class="cham">
+                    <div class="cham1"></div>
+                    <div class="champ">Cước phí vận chuyển</div>
+                </div>
+                <div class="cham">
+                    <div class="cham1"></div>
+                    <div class="champ mb-1">Hướng dẫn đặt hàng</div>
+                </div>
+                <strong>Hình thức thanh toán</strong>
+                <div class="httt">
+                    <img src="https://cdn-icons-png.flaticon.com/128/5968/5968299.png" alt="">
+                    <img src="https://cdn.haitrieu.com/wp-content/uploads/2022/10/Logo-MoMo-Square.png" alt="">
+                </div>
+                <div class="httt" style="filter:invert(1);">
+                    <img src="https://cdn-icons-png.flaticon.com/128/9618/9618751.png" alt="">
+                    <img src="https://cdn-icons-png.flaticon.com/128/17250/17250519.png" alt="">
+                </div>
+            </div>
+            <div class="col trai">
+                <strong>Địa chỉ cửa hàng</strong>
+                <div class="diachi">
+                    <img style="width: 15px;filter: invert(1);float: inline-start;padding: 0;margin-right: 5px;"
+                        src="https://cdn-icons-png.flaticon.com/128/69/69524.png" alt="">
+                    <div style="font-weight: 500;">Vinh University Campus 1, Bến Thủy, Vinh, Nghệ An</div>
+                </div>
+                <div class="diachi">
+                    <img style="padding: 0;margin-right: 5px; width: 15px;filter: invert(1);float: inline-start;"
+                        src="https://cdn-icons-png.flaticon.com/128/483/483947.png" alt="">
+                    <div style="font-weight: 500;font-size: 80%;">0838.555.888</div>
+                </div>
+                <hr style="font-weight: bold;">
+                <div class="diachi">
+                    <img style="width: 15px;filter: invert(1);float: inline-start;padding: 0;margin-right: 5px;"
+                        src="https://cdn-icons-png.flaticon.com/128/69/69524.png" alt="">
+                    <div style="font-weight: 500;">Vinh University Campus 2, QL46, Vinh, Nghệ An</div>
+                </div>
+                <div class="diachi">
+                    <img style="padding: 0;margin-right: 5px; width: 15px;filter: invert(1);float: inline-start;"
+                        src="https://cdn-icons-png.flaticon.com/128/483/483947.png" alt="">
+                    <div style="font-weight: 500;font-size: 80%;">0385.555.888</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <a href="#top">
+        <button class="pfixed">
+            <img src="https://cdn-icons-png.flaticon.com/128/3838/3838683.png" alt="">
+        </button>
+    </a>
+
+</body>
+
+</html>
